@@ -23,10 +23,11 @@ import junit.framework.Assert;
 public class PatientCreationPage {
 
 	WebDriver driver;
+	String path = System.getProperty("user.dir");
 	
 	@Given("^Open the Chrome and Launch the application$")
 	public void open_the_Chrome_and_Launch_the_application() throws Throwable {
-		System.setProperty("webdriver.chrome.driver","C:\\Program Files\\BDD_TakeHomeChallengeProject\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",path + "\\Drivers\\chromedriver.exe");
 		 driver = new ChromeDriver();
 		 driver.get("http://localhost:3000/");
 		 driver.manage().window().maximize();
